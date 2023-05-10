@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import { useNavigate, Link } from "react-router-dom";
-import Logo from "../assets/clogo.jpeg";
+import Logo from "../assets/png-transparent-chat-text-color-gradient-3d-icon-removebg-preview.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { loginRoute } from "../utils/APIRoutes";
@@ -88,7 +88,7 @@ function Login() {
           </span>
         </form>
       </FormContainer>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </>
   );
 }
@@ -101,7 +101,7 @@ const FormContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color: #000000;
+  background-color: #001F36;
   .brand {
     display: flex;
     align-items: center;
@@ -119,25 +119,26 @@ const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-color: #00000076;
+    background-color: transparent;
+    border: 0.1rem solid #003C69;
     border-radius: 2rem;
     padding: 5rem;
   }
   input {
     background-color: transparent;
     padding: 1rem;
-    border: 0.1rem solid #4e0eff;
+    border: 0.1rem solid #003C69;
     border-radius: 0.4rem;
     color: white;
     width: 100%;
     font-size: 1rem;
     &:focus {
-      border: 0.1rem solid #997af0;
+      border: 0.1rem solid #ffee6f;
       outline: none;
     }
   }
   button {
-    background-color: #4e0eff;
+    background-color: #003C69;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -147,14 +148,14 @@ const FormContainer = styled.div`
     font-size: 1rem;
     text-transform: uppercase;
     &:hover {
-      background-color: #4e0eff;
+      background-color: #003C69;
     }
   }
   span {
     color: white;
     text-transform: uppercase;
     a {
-      color: #4e0eff;
+      color: #ffee6f;
       text-decoration: none;
       font-weight: bold;
     }

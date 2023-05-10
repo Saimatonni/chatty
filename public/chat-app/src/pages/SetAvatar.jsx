@@ -10,7 +10,8 @@ import { useNavigate } from "react-router-dom";
 import { setAvatarRoute } from "../utils/APIRoutes";
 
 function SetAvatar() {
-  const api = `https://api.multiavatar.com/4645646`;
+  const api = `https://api.dicebear.com/6.x/micah/svg?seed=Felix`;
+  //https://api.dicebear.com/6.x/micah/svg
   // const api = `https://api.multiavatar.com`;
   const navigate = useNavigate();
   const [avatars, setAvatars] = useState([]);
@@ -133,7 +134,7 @@ function SetAvatar() {
         <button onClick={setProfilePicture} className="submit-btn">
           Set as Profile Picture
         </button>
-        <ToastContainer />
+        {/* <ToastContainer /> */}
       </Container>
 
     </>
@@ -147,7 +148,7 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 3rem;
-  background-color: #000000;
+  background-color: #001f36;
   height: 100vh;
   width: 100vw;
   .loader {
@@ -175,12 +176,12 @@ const Container = styled.div`
       }
     }
     .selected {
-      border: 0.4rem solid #4e0eff;
+      border: 0.4rem solid #ffee6f;
     }
   }
   .submit-btn {
-    background-color: #4e0eff;
-    color: white;
+    background-color: #ffee6f;
+    color: black;
     padding: 1rem 2rem;
     border: none;
     font-weight: bold;
@@ -189,7 +190,7 @@ const Container = styled.div`
     font-size: 1rem;
     text-transform: uppercase;
     &:hover {
-      background-color: #4e0eff;
+      background-color: #ffee6f;
     }
   }
 `;
