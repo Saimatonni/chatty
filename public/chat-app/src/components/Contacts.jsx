@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Logo from "../assets/clogo.jpeg";
+import Logo from "../assets/png-transparent-chat-text-color-gradient-3d-icon-removebg-preview.png";
 import Logout from "../pages/Logout";
 
 function Contacts({contacts, changeChat}) {
@@ -76,7 +76,7 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
-  background-color: #060047;
+  background-color: rgba(0, 60, 105, 0.5);
   .brand {
     display: flex;
     align-items: center;
@@ -122,16 +122,18 @@ const Container = styled.div`
       }
       .username {
         h3 {
-          color: white;
+          color: #003C69;
         }
       }
     }
     .selected {
-      background-color: #9a86f3;
+      background-color: #AEDCFF;
+      
+      
     }
   }
   .current-user {
-    background-color: #0d0d30;
+    background-color: #003C69;
     display: flex;
     justify-content: center;
     align-items: center;
