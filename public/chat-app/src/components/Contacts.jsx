@@ -76,7 +76,7 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
-  background-color: rgba(0, 60, 105, 0.5);
+  background-color: #060047;
   .brand {
     display: flex;
     align-items: center;
@@ -122,18 +122,16 @@ const Container = styled.div`
       }
       .username {
         h3 {
-          color: #003C69;
+          color: white;
         }
       }
     }
     .selected {
-      background-color: #AEDCFF;
-      
-      
+      background-color: #9a86f3;
     }
   }
   .current-user {
-    background-color: #003C69;
+    background-color: #0d0d30;
     display: flex;
     justify-content: center;
     align-items: center;
