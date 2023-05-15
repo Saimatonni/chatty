@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { BsEmojiSmileFill } from "react-icons/bs";
 import { IoMdSend } from "react-icons/io";
 import styled from "styled-components";
-import Picker from "emoji-picker-react";
+import Picker from 'emoji-picker-react';
+
+
+
 
 function ChatInput({ handleSendMsg }) {
   const [msg, setMsg] = useState("");
@@ -11,11 +14,26 @@ function ChatInput({ handleSendMsg }) {
     setShowEmojiPicker(!showEmojiPicker);
   };
 
+  const [chosenEmoji, setChosenEmoji] = useState(null);
+
+  // const handleEmojiClick = (event, emojiObject) => {
+  //   let message = msg;
+  //   message += emojiObject.emoji;
+  //   setMsg(message);
+  // };
+
+  // const handleEmojiClick = (event, emoji) => {
+  //   setMsg((msg) => msg + emoji.emoji);
+  //   console.log(msg);
+  // };
+
+ 
   const handleEmojiClick = (event, emojiObject) => {
-    let message = msg;
-    message += emojiObject.emoji;
-    setMsg(message);
+    setChosenEmoji(emojiObject);
+    setMsg((prevMsg) => prevMsg + emojiObject.emoji);
   };
+  
+
 
   const sendChat = (event) => {
     event.preventDefault();
@@ -25,13 +43,15 @@ function ChatInput({ handleSendMsg }) {
     }
   };
 
-    return (
-      <Container>
+  return (
+    <Container>
       <div className="button-container">
         <div className="emoji">
-          <BsEmojiSmileFill onClick={handleEmojiPickerhideShow} />
-          {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
+          {/* <BsEmojiSmileFill onClick={handleEmojiPickerhideShow} /> */}
+          {/* {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />} */}
+          
         </div>
+        
       </div>
       <form className="input-container" onSubmit={(event) => sendChat(event)}>
         <input
@@ -45,7 +65,7 @@ function ChatInput({ handleSendMsg }) {
         </button>
       </form>
     </Container>
-    )
+  )
 }
 
 
@@ -71,9 +91,9 @@ const Container = styled.div`
         color: #AEDCFF;
         cursor: pointer;
       }
-      .emoji-picker-react {
+    .emoji-picker-react{
         position: absolute;
-        top: -350px;
+        top: -470px;
         background-color: #AEDCFF;
         box-shadow: 0 5px 10px #9a86f3;
         border-color: #9a86f3;
@@ -99,6 +119,7 @@ const Container = styled.div`
       }
     }
   }
+  
   .input-container {
     width: 100%;
     border-radius: 2rem;
